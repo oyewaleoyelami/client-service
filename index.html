@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>LeraLoro - Nigeria HealthCare Facilities Search Tool</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link href="css/hover-min.css" type="text/css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css"  href="css/main-styles.css">
+    <link rel="stylesheet" type="text/css"  href="css/responsive.css">
+    <link rel="stylesheet" type="text/css"  href="css/loader.css">
+
+    <link rel="stylesheet" type="text/css"  href="css/general.css">
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .dataTables_filter,.dataTables_length { display: none; }
+        .dataTables_filter, .dataTables_length, .dataTables_wrapper thead {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="add-listings-inner-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="inner-header-text">
+                    <h1>LeraLoro <span style="text-transform: lowercase; font-size:12px"> beta</span> - SEARCH TOOL FOR NIGERIA HEALTHCARE FACILITIES </h1>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end header-->
+
+<!-- start search section-->
+<div id="search-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="col-sm-9 col-md-9 nopadding">
+                    <div id="search-input">
+                        <div class="col-sm-9 nopadding">
+                            <input type="text" name="query" id="query" class="form-control" placeholder="Search Query">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3 text-right">
+                    <div id="search-button">
+                        <button type="submit" id="search"><i class="fa fa-search"></i>Search</button>
+                    </div>
+                </div>
+
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end search section-->
+
+<!-- end main banner-->
+<!-- start search categories-->
+<div id="search-categories">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div id="categories-heading">
+                    <h1><span>search Results</span></h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end search categories-->
+
+<!-- start feature listings-->
+<div id="feature-listings" style="min-height: 220px;">
+        <div class="container">
+            <table id="dataTableId" cellspacing="0" width="100%" class="display">
+                <thead>
+                <tr>
+                    <th></th>
+                </tr>
+                </thead>
+
+
+                <div class="row">
+                    <div class="col-sm-6 text-center">
+
+                        <div id="feature-box">
+                            <tbody>
+
+                            </tbody>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+
+                    </div>
+                </div>
+            </table>
+        </div>
+    </div>
+<!-- end feature listings-->
+
+<div class="clearfix"></div>
+
+
+<footer>
+    <!--<footer style="position: fixed; bottom: 0px; width: 100%;  background-color: black;">-->
+    <!-- start prefooter-->
+    <div id="prefooter">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="prefooter-heading">
+                        <h1>Supported By</h1>
+                    </div>
+                    <div id="prefooter-list-categories">
+                        <ul>
+                            <li><span><a href="https://grid-nigeria.org/" target="_blank">GRID3</a></span></li>
+                            <!--<li><span><a href="https://cmapit.com/" target="_blank">CmapIT</a></span></li>-->
+                            <!--<li><span><a href="https://digitalhealth.com.ng/" target="_blank">DHN</a></span></li>-->
+
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="col-sm-6 col-md-4">-->
+                <!--<div class="prefooter-heading">-->
+                <!--<h1>contact </h1>-->
+                <!--</div>-->
+                <!--<div id="prefooter-contact-info">-->
+                <!--&lt;!&ndash;<p> making health data available for you.. </p>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="contact-info">-->
+                <!--<div class="col-sm-1 col-xs-2 nopadding">-->
+                <!--<div class="contact-icon">-->
+                <!--<i class="fa fa-map-marker"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-10 col-xs-10">-->
+                <!--<div class="contact-text">-->
+                <!--<h1>142 Abolade Avenue</h1>-->
+                <!--<p>Katwe, Nigeria.</p>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="contact-info">-->
+                <!--<div class="col-sm-1 col-xs-2 nopadding">-->
+                <!--<div class="contact-icon">-->
+                <!--<i class="fa fa-phone"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-10 col-xs-10">-->
+                <!--<div class="contact-text">-->
+                <!--&lt;!&ndash;<h1><a href="index.html#">+0432 987 65432</a></h1>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p><a href="#">support@leraloro.com</a></p>&ndash;&gt;-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="contact-info">-->
+                <!--<div class="col-sm-1 col-xs-2 nopadding">-->
+                <!--<div class="contact-icon">-->
+                <!--<i class="fa fa-clock-o"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-sm-10 col-xs-10">-->
+                <!--<div class="contact-text">-->
+                <!--<h1>Monday - Friday</h1>-->
+                <!--<p>9:00 am - 5:00 pm</p>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="col-sm-6 col-md-4">
+
+                    <div class="prefooter-heading">
+                        <h1>follow us</h1>
+                    </div>
+                    <div class="social">
+                        <!--<a href="https://www.facebook.com/" class="hvr-sweep-to-top">-->
+                        <!--<i class="fa fa-facebook"></i>-->
+                        <!--</a>-->
+                        <a href="https://www.twitter.com/leraloro_"  target="_blank" class="hvr-sweep-to-top">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <!--<a href="https://plus.google.com/" class="hvr-sweep-to-top">-->
+                        <!--<i class="fa fa-google-plus"></i>-->
+                        <!--</a>-->
+                        <!--<a href="https://www.linkedin.com/" class="hvr-sweep-to-top">-->
+                        <!--<i class="fa fa-linkedin"></i>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end prefooter-->
+
+    <!-- start footer-->
+    <!--<div id="footer">-->
+    <!--<div class="container">-->
+    <!--<div class="row">-->
+    <!--<div class="col-sm-12 text-center">-->
+    <!--<div id="footer-text">-->
+    <!--<p>All copyrights reserved    &#169 Copyright <a th:text="${#dates.year(#dates.createNow())}"></a></p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+</footer>
+
+<!-- Scripts -->
+<script src="js/wow.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/waypoints.js"></script>
+<script src="js/jquery.counterup.js"></script>
+<script src="js/jquery.bxslider-rahisified.min.js"></script>
+<script src="js/table/jquery.dataTables.min.js"></script>
+
+<script src="js/custom.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#search').click(function () {
+            var query = $("#query").val();
+            var parsedResult='';
+            $.ajax({
+                url: "http://localhost:8082/search/lera/query/"+query,
+                type: 'GET',
+                success: function(result){
+                    if (result.length > 0) {
+                        var responses = [];
+                        for (var key in result) {
+                            var value = result[key];
+                            parsedResult = value;
+                            responses.push(parsedResult);
+                        }
+
+                    }
+                    $('#dataTableId').dataTable({
+                        data: responses,
+                        destroy: true,
+                        pageLength: 5,
+                        order: [],
+                        paging: true,
+                        lengthChange: false,
+                        searching: false,
+                        ordering: true,
+                        info: true,
+                        language: {
+                            emptyTable:   "No Result Found.!"
+                        },
+                        "columnDefs": [
+                            {
+
+                                "render": function ( data, type, row ) {
+                                    return  '                <div id="feature-box">\n' +
+                                        '                    <div class="col-sm-12 col-md-12">\n' +
+                                        '                        <div class="feature-boxes-container">\n' +
+                                        '                            <div class="col-sm-5 col-md-5 feature-box-text">\n' +
+                                        '                                <p> Name:  ' + row["name"] + '</p>\n' +
+                                        '                                <p> Ward Name:  ' + row["ward"] + '</p>\n' +
+                                        '                                <p> LGA Name:  ' + row["lga"] + '</p>\n' +
+                                        '                                <p> State Name:  ' + row["state"] + '</p>\n' +
+                                        '                                <p> Type:  ' + row["type"] + '</p>\n' +
+                                        '                                <p> Functional:  ' + row["functional"] + '</p>\n' +
+                                        '                                <p> Ownership:  ' + row["ownership"] + '</p>\n' +
+                                        '                                <p> Longitude:  ' + row["location"][0] + '</p>\n' +
+                                        '                                <p> Latitude:  ' + row["location"][1] + '</p>\n' +
+                                        '                            </div>\n' +
+                                        '<div class="col-sm-7 col-md-7 location-map-box">\n' +
+                                        '                        <iframe '+
+                                        '  width="100%" '+
+                                        ' height="250px" '+
+                                        'frameborder="0" '+
+                                        'scrolling="yes" '+
+                                        'marginheight="0" '+
+                                        ' marginwidth="0" '+
+                                        ' src="https://maps.google.com/maps?q='+ row["location"][1]+','+ row["location"][0]+'&hl=es;z=14&amp;output=embed"></iframe>'+
+                                        '                            </div>\n' +
+                                        '                        </div>\n' +
+                                        '                    </div>\n' +
+                                        '                    <div class="clearfix"></div>\n' +
+                                        '\n' +
+                                        '            </div>\n' +
+                                        '\n' +
+                                        '            <div class="clearfix"></div>' ;
+                                },
+                                "targets": 0
+                            },
+                            { "width": "100%", "targets": 0 }
+                        ]
+                    });
+                }});
+        });
+
+        $('#query').keypress(function(event) {
+
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if (keycode == '13') {
+
+                var query = $("#query").val();
+                var parsedResult='';
+                $.ajax({
+                    url: "http://localhost:8082/search/lera/query/"+query,
+                    type: 'GET',
+                    success: function(result){
+                        if (result.length > 0) {
+                            var responses = [];
+                            for (var key in result) {
+                                var value = result[key];
+                                parsedResult = value;
+                                responses.push(parsedResult);
+                            }
+                        }
+                        $('#dataTableId').dataTable({
+                            data: responses,
+                            destroy: true,
+                            pageLength: 5,
+                            order: [],
+                            paging: true,
+                            lengthChange: false,
+                            searching: false,
+                            ordering: true,
+                            info: true,
+                            language: {
+                                emptyTable:   "No Result Found.!"
+                            },
+                            "columnDefs": [
+                                {
+                                    "render": function ( data, type, row ) {
+                                        return  '                <div id="feature-box">\n' +
+                                            '                    <div class="col-sm-12 col-md-12">\n' +
+                                            '                        <div class="feature-boxes-container">\n' +
+                                            '                            <div class="col-sm-5 col-md-5 feature-box-text">\n' +
+                                            '                                <p> Name:  ' + row["name"] + '</p>\n' +
+                                            '                                <p> Ward Name:  ' + row["ward"] + '</p>\n' +
+                                            '                                <p> LGA Name:  ' + row["lga"] + '</p>\n' +
+                                            '                                <p> State Name:  ' + row["state"] + '</p>\n' +
+                                            '                                <p> Type:  ' + row["type"] + '</p>\n' +
+                                            '                                <p> Functional:  ' + row["functional"] + '</p>\n' +
+                                            '                                <p> Ownership:  ' + row["ownership"] + '</p>\n' +
+                                            '                                <p> Longitude:  ' + row["location"][1] + '</p>\n' +
+                                            '                                <p> Latitude:  ' + row["location"][0] + '</p>\n' +
+                                            '                            </div>\n' +
+                                            '<div class="col-sm-7 col-md-7 location-map-box">\n' +
+                                            '                        <iframe '+
+                                            'width="100%" '+
+                                            'height="250px" '+
+                                            'frameborder="0" '+
+                                            'scrolling="yes" '+
+                                            'marginheight="0" '+
+                                            'marginwidth="0" '+
+                                            'src="https://maps.google.com/maps?q='+row["location"][0]+','+row["location"][1]+'&hl=es;z=14&amp;output=embed"></iframe>'+
+                                            '                            </div>\n' +
+                                            '                        </div>\n' +
+                                            '                    </div>\n' +
+                                            '                    <div class="clearfix"></div>\n' +
+                                            '            </div>\n' +
+                                            '            <div class="clearfix"></div>' ;
+                                    },
+                                    "targets": 0
+                                },
+                                { "width": "100%", "targets": 0 }
+                            ]
+                        });
+                    }});
+            }
+
+        });
+
+
+    });
+
+</script>
+</body>
+</html>
