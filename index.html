@@ -132,7 +132,7 @@
                         <ul>
                             <li><span><a href="https://grid-nigeria.org/" target="_blank">GRID3</a></span></li>
                             <!--<li><span><a href="https://cmapit.com/" target="_blank">CmapIT</a></span></li>-->
-                            <!--<li><span><a href="https://digitalhealth.com.ng/" target="_blank">DHN</a></span></li>-->
+                            <li><span><a href="https://digitalhealth.com.ng/" target="_blank">DHN</a></span></li>
 
                         </ul>
                     </div>
@@ -235,23 +235,26 @@
 <script src="js/custom.js"></script>
 
 <script type="text/javascript">
+
+    var searchUrl = "https://api.leraloro.com/lera/query/";
+
     $(document).ready(function () {
         $('#search').click(function () {
             var query = $("#query").val();
             var parsedResult='';
             $.ajax({
-                url: "http://localhost:8082/search/lera/query/"+query,
+                url: searchUrl + query,
                 type: 'GET',
                 success: function(result){
-                    if (result.length > 0) {
                         var responses = [];
+                    result = result['facilities'];
                         for (var key in result) {
                             var value = result[key];
                             parsedResult = value;
                             responses.push(parsedResult);
                         }
 
-                    }
+
                     $('#dataTableId').dataTable({
                         data: responses,
                         destroy: true,
@@ -317,17 +320,17 @@
                 var query = $("#query").val();
                 var parsedResult='';
                 $.ajax({
-                    url: "http://localhost:8082/search/lera/query/"+query,
+                    url: searchUrl + query,
                     type: 'GET',
                     success: function(result){
-                        if (result.length > 0) {
                             var responses = [];
+                        result = result['facilities'];
                             for (var key in result) {
                                 var value = result[key];
                                 parsedResult = value;
                                 responses.push(parsedResult);
                             }
-                        }
+
                         $('#dataTableId').dataTable({
                             data: responses,
                             destroy: true,

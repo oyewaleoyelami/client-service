@@ -1,2 +1,2 @@
 # leraloro
-a simple health care facilities in Nigeria search tool. This is the web client: www.leraloro.com
+The web client of the [LeraLoro](https://leraloro.com) platform.
