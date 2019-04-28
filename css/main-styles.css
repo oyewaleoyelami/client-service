@@ -1529,16 +1529,17 @@ option
 	margin-right:5px;
 }
 
-#prefooter-list-categories
-{
-	margin-top:30px;
+.prefooter-list-categories {
+    margin-top: 10px;
 }
-#prefooter-list-categories ul
+
+.prefooter-list-categories ul
 {
 	display:inline-block;
 	width:100%;
 }
-#prefooter-list-categories ul li
+
+.prefooter-list-categories ul li
 {
 	color: #636363;
 	font-family: "Roboto",sans-serif;
@@ -1546,19 +1547,22 @@ option
 	line-height:37px;
 	list-style:none;
 }
-#prefooter-list-categories ul li a
+
+.prefooter-list-categories ul li a
 {
 	color: #636363;
 	transition:all 0.3s ease 0s;
 	-webkit-transition:all 0.3s ease 0s;
 	-moz-transition:all 0.3s ease 0s;
 }
-#prefooter-list-categories ul li a:hover
+
+.prefooter-list-categories ul li a:hover
 {
 	color:#FFFFFF;
 	padding-left:3px;
 }
-#prefooter-list-categories ul li span
+
+.prefooter-list-categories ul li span
 {
 	background: #002856 none repeat scroll 0 0;
 	border-radius: 4px;
